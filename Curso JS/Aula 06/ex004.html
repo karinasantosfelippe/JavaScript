@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editando e Reproduzindo Variáveis</title>
+    <style>
+        body {
+            background-color: rgb(231, 166, 228);
+            color: white;
+            font: normal 18pt Arial;
+        }
+        h1 {
+            color:rgb(255, 0, 242);
+        }
+    </style>
+</head>
+<body>
+
+<script> 
+    var nome = window.prompt('Qual seu nome?');
+    document.write(`<h1>Olá, ${nome.toUpperCase()}!</h1>`);
+    document.write(`Bem <strong>${nome}</strong>, <br>
+    Estou testando algumas coisas!<br>`);
+    document.write(`Seu nome tem ${nome.length} letras`);
+</script>
+
+</body>
+</html>

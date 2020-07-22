@@ -1,0 +1,6 @@
+function soma(n1=0, n2=0){
+    return n1 + n2
+}
+/* SE EU NÃO PASSAR ALGUM DOS NUMEROS NOS PARÂMETROS, 
+REPARE QUE ELE VAI ATRIBUIR 0 PARA O QUE ESTIVER FALTANDO*/
+console.log(soma(2))

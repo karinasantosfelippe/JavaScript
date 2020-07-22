@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Repeticão</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        <div>
+            <p>Digite um valor:
+                <input type="number" name="txtnum" id="txtnum">
+                <input type="button" value="Calcular" id="btncalcular" onclick="calcular()">
+            </p>
+        </div>
+        <div id="res">
+            <select name="tabuada" id="slcresultado" size="10">
+                <!-- <option value="v1">Valor1</option> -->
+                <!-- <option value="v2">Valor2</option> -->
+                <option>Digite um valor para ser calculado</option>
+            </select>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; KarinaSantosFelippe</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

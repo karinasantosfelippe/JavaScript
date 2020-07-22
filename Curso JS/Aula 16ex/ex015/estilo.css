@@ -1,0 +1,34 @@
+body{
+    background: pink;
+    font: normal 14pt Tahoma;
+}
+header{
+    font-size: 18pt;
+    text-align: center;
+    color: white;
+}
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+input#txtnum{
+    width: 100px;
+    height: 20px;
+    text-align: center;
+}
+select{
+    margin-top: 20px;
+    padding: 5px;
+    width: 300px;
+    font: normal 12pt Arial;
+}
+footer{
+    font: normal 12pt Arial;
+    font-style: italic;
+    text-align: center;
+    color: white;
+}

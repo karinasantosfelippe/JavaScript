@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de Condições</title>
+    <style>
+        body{
+            background-color: rgb(149, 222, 255);
+            font: normal 16pt Arial;
+        }
+        h1{
+            font: bold 18pt Tahoma;
+            text-align: center;
+            background-color: black;
+            color:rgb(42, 166, 248);
+            line-height: 200%;
+        }
+        input#txtpais{
+            height: 20px;
+            width: 250px;
+            vertical-align: bottom;
+            font: normal 12pt Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Classificando sua origem:</h1>
+    Vive em qual país? <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="verificar" onclick="verify()">
+    <div id='resp'></div>
+    <script>
+        function verify() {
+            var p = document.querySelector('input#txtpais').value
+            p = String(p).toLowerCase()
+            var res = document.querySelector('div#resp')
+            if(p == "brasil"){
+                res.innerHTML = 'Você é brasileiro.'
+            }else if(p == ""){
+                window.alert('Digite um país!')
+            }else{
+                res.innerHTML = 'Você é estrangeiro.'
+            }
+        }
+    </script>
+</body>
+</html>

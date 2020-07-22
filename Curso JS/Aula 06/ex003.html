@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando Variáveis</title>
+    <style>
+    /* COMENTÁRIO CSS */
+        body {
+            background-color: rgb(231, 166, 228);
+            color: white;
+            font: normal 18pt Arial;
+        }
+        h1 {
+            color:rgb(255, 0, 242);
+        }
+    </style>
+</head>
+<body>
+<!-- COMENTÁRIO HTML -->
+    <h1>Olá, </h1>
+    <p>Já me livrei da maldição!</p>
+
+    <script> 
+        var n1 = Number.parseFloat(window.prompt('Digite um número:'));
+        //prompt te devolve String!
+        var n2 = Number(window.prompt('Digite outro número:'));
+        var soma = n1 + n2;
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${soma}`);
+    </script>
+</body>
+</html>

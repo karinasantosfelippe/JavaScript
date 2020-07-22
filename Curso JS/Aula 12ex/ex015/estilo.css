@@ -1,0 +1,35 @@
+body{
+    background: peachpuff;
+    font: normal 14pt Tahoma;
+}
+header{
+    font-size: 16pt;
+    text-align: center;
+}
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+input#txtano{
+    height: 25px;
+    vertical-align: bottom;
+}
+input#teste{
+    width: 100px;
+    height: 30px;
+    font: normal 12pt Arial;
+}
+div#res{
+    font-size: 12pt;
+    text-align: center;
+    padding: 20px;
+}
+footer{
+    font: normal 12pt Arial;
+    font-style: italic;
+    text-align: center
+}
