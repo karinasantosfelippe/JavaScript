@@ -7,19 +7,15 @@
     <body>
         <div id="app">
             <input type="text" name="nome" />
-            <input type="text" name="nome2" />
             <button class="botao">Adicionar</button>
         </div>
         <script>
-            var inputElement = document.querySelectorAll('input');
-            //var inputElement = document.querySelector('input[name=nome]')
-            
-            //var inputElement = document.querySelector('input')
-            //retorna o primeiro que vier com o query!
-
-            //var inputElement = document.querySelector('body div#app input');
-            // pode deixar sem a especificação do body, neste caso
-            console.log(inputElement);
+            var inputElement = document.querySelector('input[name=nome]')
+            var btnElement = document.querySelector('button.botao') // USAMOS PONTO PARA REFERENCIAR CLASSES
+            btnElement.onclick = function(){
+                var texto = inputElement.value;
+                alert(texto)
+            }
         </script>
     </body>
 </html>
