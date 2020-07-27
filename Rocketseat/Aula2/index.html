@@ -6,23 +6,13 @@
     </head>
     <body>
         <div id="app">
-            <input id='nome' />
+            <div class="box"></div>
         </div>
         <script>
-            var linkElement = document.createElement('a');
-            linkElement.setAttribute('href', 'http://rocketseat.com.br');
-            linkElement.setAttribute('title', 'Site da Rocketseat');
-
-            var textElement = document.createTextNode('Acessar site da Rocketseat');
-            linkElement.appendChild(textElement);
-            // ACABAMOS DE CRIAR UM LINK. Como fazer assim lá no body:
-            // <a href="http://rocketseat.com.br">Acessar site da Rocketseat</a>
-
-            var containerElement = document.querySelector('#app');
-            containerElement.appendChild(linkElement);
-
-            var inputElement = document.querySelector('#nome');
-            //containerElement.removeChild(inputElement)
+            var boxElement = document.querySelector('.box')
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.style.backgroundColor = '#f00';
         </script>
     </body>
 </html>
