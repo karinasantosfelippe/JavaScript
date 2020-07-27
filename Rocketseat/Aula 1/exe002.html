@@ -7,16 +7,23 @@
 <body>
     <script>
         function pares(x,y){
-            let resultado = '';
+            /*let resultado = '';
             for(let i=x; i<=y; i++){
                 if(i%2 == 0){
                     if (i==y || i==(y-1)) resultado += i
                     else resultado += i + ', ';
                 }
+            }*/
+            var resultado = []
+            while(x<y){
+                if(x%2==0){
+                    resultado.push(`${x}`);
+                }
+                x++;
             }
             return resultado;
         }
-        console.log(pares(32,321));
+        console.log(pares(32,321).join(', '));
     </script>
 </body>
 </html>
