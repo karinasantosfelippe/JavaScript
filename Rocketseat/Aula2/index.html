@@ -6,16 +6,23 @@
     </head>
     <body>
         <div id="app">
-            <input type="text" name="nome" />
-            <button class="botao">Adicionar</button>
+            <input id='nome' />
         </div>
         <script>
-            var inputElement = document.querySelector('input[name=nome]')
-            var btnElement = document.querySelector('button.botao') // USAMOS PONTO PARA REFERENCIAR CLASSES
-            btnElement.onclick = function(){
-                var texto = inputElement.value;
-                alert(texto)
-            }
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href', 'http://rocketseat.com.br');
+            linkElement.setAttribute('title', 'Site da Rocketseat');
+
+            var textElement = document.createTextNode('Acessar site da Rocketseat');
+            linkElement.appendChild(textElement);
+            // ACABAMOS DE CRIAR UM LINK. Como fazer assim lá no body:
+            // <a href="http://rocketseat.com.br">Acessar site da Rocketseat</a>
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+
+            var inputElement = document.querySelector('#nome');
+            //containerElement.removeChild(inputElement)
         </script>
     </body>
 </html>
