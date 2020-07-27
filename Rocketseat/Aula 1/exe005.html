@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <script>
+        function escreverNaTela(texto){
+            console.log(texto);
+        }
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["JavaScript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+        for(let usuario in usuarios){
+            escreverNaTela(`O(a) ${usuarios[usuario].nome} possui as habilidades: ${usuarios[usuario].habilidades} `)
+        }
+    </script>
+</body>
+</html>
