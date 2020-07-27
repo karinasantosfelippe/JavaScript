@@ -6,12 +6,20 @@
     </head>
     <body>
         <div id="app">
-            <input onkeypress="mostraAlerta()" />
+            <input type="text" name="nome" />
+            <input type="text" name="nome2" />
+            <button class="botao">Adicionar</button>
         </div>
         <script>
-            function mostraAlerta(){
-                alert('Botão clicado!')
-            }
+            var inputElement = document.querySelectorAll('input');
+            //var inputElement = document.querySelector('input[name=nome]')
+            
+            //var inputElement = document.querySelector('input')
+            //retorna o primeiro que vier com o query!
+
+            //var inputElement = document.querySelector('body div#app input');
+            // pode deixar sem a especificação do body, neste caso
+            console.log(inputElement);
         </script>
     </body>
 </html>
