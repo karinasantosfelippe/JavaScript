@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Exercício 3</title>
+    </head>
+    <body>
+        <ul></ul>
+        <script>
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var lista = document.querySelector('ul');
+            for(nome of nomes){
+                let item = document.createElement('li')
+                item.textContent = nome
+                lista.appendChild(item)
+            }
+        </script>
+    </body>
+</html>
