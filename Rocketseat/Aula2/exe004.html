@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Exercício 3</title>
+    </head>
+    <body>
+        <input type="text" id="nome" />
+        <button onclick="adicionar()">Adicionar</button>
+        <ul></ul>
+        <script>
+            function adicionar(){
+                var lista = document.querySelector('ul');
+                let inputElement = document.getElementById('nome');
+                let item = document.createElement('li')
+                item.textContent = inputElement.value
+                lista.appendChild(item);
+                inputElement.value = ''
+                inputElement.focus();
+            }
+        </script>
+    </body>
+</html>
