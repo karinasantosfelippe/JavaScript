@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <script>
+        function pares(x,y){
+            let resultado = '';
+            for(let i=x; i<=y; i++){
+                if(i%2 == 0){
+                    if (i==y || i==(y-1)) resultado += i
+                    else resultado += i + ', ';
+                }
+            }
+            return resultado;
+        }
+        console.log(pares(32,321));
+    </script>
+</body>
+</html>
