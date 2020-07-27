@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Exercício 1</title>
+    </head>
+    <body>
+        <div id="container"></div>
+        <button id="botao">Criar Quadrado</button>
+        <script>
+            var containerElement = document.querySelector('#container')
+            var btnCriar = document.querySelector('#botao')
+            btnCriar.onclick = function(){
+                var newElement = document.createElement('div')
+                newElement.style.width = '100px' ;
+                newElement.style.height = '100px';
+                newElement.style.backgroundColor = '#f00';
+                newElement.style.marginBottom = 5;
+                containerElement.appendChild(newElement);
+            }
+            //console.log(btnCriar)
+        </script>
+    </body>
+</html>
