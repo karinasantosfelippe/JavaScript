@@ -19,8 +19,8 @@
                 habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
             }
         ];
-        for(let usuario in usuarios){
-            escreverNaTela(`O(a) ${usuarios[usuario].nome} possui as habilidades: ${usuarios[usuario].habilidades} `)
+        for(let usuario of usuarios){
+            escreverNaTela(`O(a) ${usuario.nome} possui as habilidades: ${usuario.habilidades.join(', ')} `)
         }
     </script>
 </body>
