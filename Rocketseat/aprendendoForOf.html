@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>For...Of</title>
+</head>
+<body>
+    <script>
+        /* FROM MDN
+        Descrição:
+            O loop for...of percorre objetos iterativos (incluindo Array, Map, Set, o objeto arguments e assim por diante), chamando uma função personalizada com instruções a serem executadas para o valor de cada objeto distinto.
+        
+        Sintaxe:
+            for (variavel of iteravel) {
+                declaração
+            }
+
+            variável
+                A cada iteração, um valor de uma propriedade diferente é atribuido à variável.
+            iteravel
+                Objeto cujos atributos serão iterados.
+        
+        Seguem exemplos:
+        */
+
+    //Iterando sobre um Array
+        let iterableArray = [10, 20, 30];
+            //Ao invés de let, você pode usar const se você não for modificar a variável dentro do bloco.
+        for (let value of iterableArray) {
+            console.log(value);
+        }
+        // 10
+        // 20
+        // 30
+
+    //Iterando sobre uma String
+        let iterableString = "boo";
+        for (let value of iterableString) {
+            console.log(value);
+        }
+        // "b"
+        // "o"
+        // "o"
+
+    //Iterando sobre uma TypedArray
+        let iterableTypedArray = new Uint8Array([0x00, 0xff]);
+        for (let value of iterableTypedArray) {
+            console.log(value);
+        }
+        // 0
+        // 255
+    
+    //Iterando sobre um Map
+        let iterableMap = new Map([["a", 1], ["b", 2], ["c", 3]]);
+        for (let entry of iterableMap) {
+            console.log(entry);
+        }
+        // [a, 1]
+        // [b, 2]
+        // [c, 3]
+        for (let [key, value] of iterableMap) {
+            console.log(value);
+        }
+        // 1
+        // 2
+        // 3
+
+    //Iterando sobre um Set
+        let iterableSet = new Set([1, 1, 2, 2, 3, 3]);
+        for (let value of iterableSet) {
+        console.log(value);
+        }
+        // 1
+        // 2
+        // 3
+
+    //Iterando sobre um objeto arguments
+        (function() {
+            for (let argument of arguments) {
+                console.log(argument);
+            }
+        })('argument1','argument2','argument3');
+        // 1
+        // 2
+        // 3
+
+    //Iterando sobre generators
+        function* fibonacci() { // uma função geradora (generator)
+            let [prev, curr] = [1, 1];
+            while (true) {
+                [prev, curr] = [curr, prev + curr];
+                yield curr;
+            }
+        }
+        for (let n of fibonacci()) {
+            console.log(n);
+            // Trunca a sequência em 1000
+            if (n >= 1000) {
+                break;
+            }
+        }
+
+
+    /*
+    * Diferença entre for...of e for...in:
+        O loop for...in irá iterar sobre todas as propriedades enumeráveis de um objeto.
+        A sintaxe do for...of é específica para coleções, ao invés de todos os objetos. Ela irá iterar desta maneira sobre os elementos de qualquer coleção que tiver uma propriedade [Symbol.iterator].
+
+        O exemplo a seguir mostra a diferença entre um loop for...of e um loop for...in.
+
+        */
+        Object.prototype.objCustom = function () {}; 
+        Array.prototype.arrCustom = function () {};
+
+        let iterable = [3, 5, 7];
+        iterable.foo = "hello";
+
+        for (let i in iterable) {
+        console.log(i); // escreve 0, 1, 2, "foo", "arrCustom", "objCustom"
+        }
+
+        for (let i of iterable) {
+        console.log(i); // escreve 3, 5, 7
+        }
+    </script>
+</body>
+</html>
