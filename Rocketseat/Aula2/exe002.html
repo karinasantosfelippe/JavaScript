@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Exercício 1</title>
+    </head>
+    <body>
+        <button id="botao">Criar Quadrado</button>
+        <div id="container"></div>
+        <script>
+
+            function getRandomColor(){
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for(var i=0;i<6;i++){
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color
+            }
+
+            var containerElement = document.querySelector('#container')
+            var btnCriar = document.querySelector('#botao')
+            btnCriar.onclick = function(){
+                var newElement = document.createElement('div')
+                newElement.style.width = '100px' ;
+                newElement.style.height = '100px';
+                newElement.style.backgroundColor = '#f00';
+                newElement.style.marginBottom = 5;
+                newElement.onmouseover = function () {
+                    newElement.style.backgroundColor = getRandomColor();
+                }
+                containerElement.appendChild(newElement);
+            }
+        </script>
+    </body>
+</html>
