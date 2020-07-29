@@ -20,4 +20,6 @@ console.log(filter); // FIND
 var find = arr.find(function (item) {
   return item === 4; // RETORNA A BUSCA (OU SEJA, O NUMERO PROCURADO OU UNDEFINED PARA O QUE NÃO ACHAR)
 });
-console.log(find);
+console.log(find); //NOVO MÉTODO INCLUDES, QUE RETORNA TRUE CASO ENCONTRE. Param: valor da busca, index (opcional - a partir de qual indice vai iniciar a busca, por padrão 0)
+
+console.log(arr.includes(4));
