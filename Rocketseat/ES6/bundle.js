@@ -1,25 +1,52 @@
 "use strict";
 
-var arr = [1, 3, 4, 5, 8, 9]; // MAP
+var arr = [1, 3, 4, 5, 8, 9];
+/** AO INVES DISSO:
+    const newArr = arr.map(function(item){
+        return item*2
+    })
+* fazemos isso:
+ */
 
 var newArr = arr.map(function (item) {
   return item * 2;
 });
-console.log(newArr); // REDUCE
+console.log(newArr);
 
-var sum = arr.reduce(function (total, next) {
-  return total + next;
-});
-console.log(sum); // FILTER
+var teste = function teste() {
+  return 'Teste';
+};
 
-var filter = arr.filter(function (item) {
-  return item % 2 === 0; // PRECISA RETORNAR TRUE OU FALSE, OBRIGATORIAMENTE!
-});
-console.log(filter); // FIND
+console.log(teste); // SEM O PARENTESES
 
-var find = arr.find(function (item) {
-  return item === 4; // RETORNA A BUSCA (OU SEJA, O NUMERO PROCURADO OU UNDEFINED PARA O QUE NÃO ACHAR)
-});
-console.log(find); //NOVO MÉTODO INCLUDES, QUE RETORNA TRUE CASO ENCONTRE. Param: valor da busca, index (opcional - a partir de qual indice vai iniciar a busca, por padrão 0)
+console.log(teste()); // AGORA CHAMANDO A FUNÇÃO
 
-console.log(arr.includes(4));
+teste = function teste() {
+  return 'Sem o return';
+};
+
+console.log(teste());
+
+teste = function teste() {
+  return 3;
+};
+
+console.log(teste()); // AGORA RETORNA UM VALOR
+
+teste = function teste() {
+  return {
+    nome: 'Nome do Objeto'
+  };
+}; // RETORNA O OBJETO
+
+
+console.log(teste());
+
+teste = function teste() {
+  return {
+    nome: 'Nome do Objeto'
+  };
+}; // RETORNA A PROPRIEDADE
+
+
+console.log(teste().nome);
