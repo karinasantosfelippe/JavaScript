@@ -1,13 +1,22 @@
-// REST
+// EXERCICIO 1
 
-function soma(a, b, ...params){
-    return params
+class Usuario{
+    constructor(email, senha){
+        this.email = email,
+        this.senha = senha
+    }
+    isAdmin(){
+        return this.admin === true
+    }
 }
-console.log(soma(1,3,4,5,6,7,8))
+class Admin extends Usuario{
+    constructor(email,senha){
+        super(email,senha)
+        this.admin = true
+    }
+}
 
-// SPREAD
-
-const arrA = [1,2,3]
-const arrB = [4,5,6]
-const arr3 = [...arrA, ...arrB]
-console.log(arr3)
+const User1 = new Usuario('email@teste.com','senha123')
+const Adm1 = new Admin('emailAdmin@teste.com','senhaAdmin')
+console.log(User1.isAdmin())
+console.log(Adm1.isAdmin())
