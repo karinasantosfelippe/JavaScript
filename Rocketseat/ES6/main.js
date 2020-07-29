@@ -1,22 +1,22 @@
-// EXERCICIO 1
+// EXERCICIO 2
 
-class Usuario{
-    constructor(email, senha){
-        this.email = email,
-        this.senha = senha
-    }
-    isAdmin(){
-        return this.admin === true
-    }
-}
-class Admin extends Usuario{
-    constructor(email,senha){
-        super(email,senha)
-        this.admin = true
-    }
-}
-
-const User1 = new Usuario('email@teste.com','senha123')
-const Adm1 = new Admin('emailAdmin@teste.com','senhaAdmin')
-console.log(User1.isAdmin())
-console.log(Adm1.isAdmin())
+const usuarios = [
+    { nome: "Diego", idade: 23, empresa: "Rocketseat" },
+    { nome: "Gabriel", idade: 15, empresa: "Rocketseat" },
+    { nome: "Lucas", idade: 30, empresa: "Facebook" }
+]
+ // 2.1
+var resultado = usuarios.map(item => item.idade)
+console.log(resultado)
+// 2.2
+resultado = usuarios.filter(item => {
+    return (item.empresa === 'Rocketseat' && item.idade > 18)
+})
+console.log(resultado)
+// 2.3
+resultado = usuarios.find(item => item.empresa === 'Google')
+console.log(resultado)
+// 2.4
+resultado = usuarios.map(item => ({...item, idade : item.idade * 2}))
+                    .filter(item => item.idade < 50)
+console.log(resultado)
