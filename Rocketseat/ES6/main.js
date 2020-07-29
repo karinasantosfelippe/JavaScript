@@ -1,32 +1,21 @@
-class List{
-    constructor(){
-        this.data = []
-    }
-    add(param){
-        this.data.push(param)
-        console.log(this.data)
-    }
-}
-class TodoList extends List{
-    constructor() {
-        super() // CHAMANDO A CLASSE PAI
-        this.usuario = 'Diego' // CRIANDO NOVA PROPRIEDADE PARA A FILHA
-    }
-
-    mostraUsuario(){
-        console.log(this.usuario)
-    }
-}
-class Matematica {      // COM O METODO ESTATICO NÓS NÃO VAMOS PRECISAR DE CONSTRUTOR PORQUE O METODO NÃO EXERGA O THIS. , ENTÃO SE QUISERMOS USAR ALGUM PARAMETRO DENTRO DO METODO STATIC PRECISAREMOS RECEBE-LO NA CHAMADA.
-    static soma(a,b){
-        return a + b
-    }
-}
-console.log(Matematica.soma(1,2)) // NÃO PRECISAMOS DEFINIR UMA NOVA CLASSE (= new Matematica()) COM METODO STATIC
-
-const MinhaLista = new TodoList()
-document.getElementById('novotodo').onclick = function(){
-    MinhaLista.add('Novo todo')
-}
-
-MinhaLista.mostraUsuario()
+const arr = [1,3,4,5,8,9]
+// MAP
+const newArr = arr.map(function(item){
+    return item*2
+})
+console.log(newArr)
+// REDUCE
+const sum = arr.reduce(function(total, next){
+    return total + next
+})
+console.log(sum)
+// FILTER
+const filter = arr.filter(function(item){
+    return item % 2 === 0 // PRECISA RETORNAR TRUE OU FALSE, OBRIGATORIAMENTE!
+})
+console.log(filter)
+// FIND
+const find = arr.find(function(item){
+    return item === 4 // RETORNA A BUSCA (OU SEJA, O NUMERO PROCURADO OU UNDEFINED PARA O QUE NÃO ACHAR)
+})
+console.log(find)
