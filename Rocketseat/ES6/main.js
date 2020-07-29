@@ -1,22 +1,20 @@
-// EXERCICIO 2
+// EXERCICIO 3
 
-const usuarios = [
-    { nome: "Diego", idade: 23, empresa: "Rocketseat" },
-    { nome: "Gabriel", idade: 15, empresa: "Rocketseat" },
-    { nome: "Lucas", idade: 30, empresa: "Facebook" }
-]
- // 2.1
-var resultado = usuarios.map(item => item.idade)
-console.log(resultado)
-// 2.2
-resultado = usuarios.filter(item => {
-    return (item.empresa === 'Rocketseat' && item.idade > 18)
-})
-console.log(resultado)
-// 2.3
-resultado = usuarios.find(item => item.empresa === 'Google')
-console.log(resultado)
-// 2.4
-resultado = usuarios.map(item => ({...item, idade : item.idade * 2}))
-                    .filter(item => item.idade < 50)
-console.log(resultado)
+// 3.1
+const arr = [1,2,3,4,5].map(item => item + 10)
+console.log(arr)
+
+// 3.2
+const usuario = { nome:'Diego', idade: 23 }
+const mostraIdade = usuario => usuario.idade
+mostraIdade(usuario)
+
+// 3.3
+const nome = 'Diego'
+const idade = 23
+const mostraUsuario = (nome='Diego', idade=18) => ({nome,idade})
+console.log(mostraUsuario(nome,usuario))
+console.log(mostraUsuario(nome))
+
+// 3.4
+const promise = () => new Promise((resolve, reject) => resolve());
