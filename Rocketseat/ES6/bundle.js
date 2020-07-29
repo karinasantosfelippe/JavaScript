@@ -46,16 +46,49 @@ var TodoList = /*#__PURE__*/function (_List) {
   var _super = _createSuper(TodoList);
 
   function TodoList() {
+    var _this;
+
     _classCallCheck(this, TodoList);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this); // CHAMANDO A CLASSE PAI
+
+    _this.usuario = 'Diego'; // CRIANDO NOVA PROPRIEDADE PARA A FILHA
+
+    return _this;
   }
+
+  _createClass(TodoList, [{
+    key: "mostraUsuario",
+    value: function mostraUsuario() {
+      console.log(this.usuario);
+    }
+  }]);
 
   return TodoList;
 }(List);
+
+var Matematica = /*#__PURE__*/function () {
+  function Matematica() {
+    _classCallCheck(this, Matematica);
+  }
+
+  _createClass(Matematica, null, [{
+    key: "soma",
+    // COM O METODO ESTATICO NÓS NÃO VAMOS PRECISAR DE CONSTRUTOR PORQUE O METODO NÃO EXERGA O THIS. , ENTÃO SE QUISERMOS USAR ALGUM PARAMETRO DENTRO DO METODO STATIC PRECISAREMOS RECEBE-LO NA CHAMADA.
+    value: function soma(a, b) {
+      return a + b;
+    }
+  }]);
+
+  return Matematica;
+}();
+
+console.log(Matematica.soma(1, 2)); // NÃO PRECISAMOS DEFINIR UMA NOVA CLASSE (= new Matematica()) COM METODO STATIC
 
 var MinhaLista = new TodoList();
 
 document.getElementById('novotodo').onclick = function () {
   MinhaLista.add('Novo todo');
 };
+
+MinhaLista.mostraUsuario();
