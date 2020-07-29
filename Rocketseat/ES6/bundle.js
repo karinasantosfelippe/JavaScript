@@ -1,40 +1,32 @@
 "use strict";
 
-// EXERCICIO 3
-// 3.1
-var arr = [1, 2, 3, 4, 5].map(function (item) {
-  return item + 10;
-});
-console.log(arr); // 3.2
+// EXERCICIO 4
+var empresa = {
+  nome: "Rocketseat",
+  endereco: {
+    cidade: "Rio do Sul",
+    estado: "SC"
+  }
+}; // 4.1
 
-var usuario = {
-  nome: 'Diego',
+var nome = empresa.nome,
+    _empresa$endereco = empresa.endereco,
+    cidade = _empresa$endereco.cidade,
+    estado = _empresa$endereco.estado;
+console.log(nome); // Rocketseat
+
+console.log(cidade); // Rio do Sul
+
+console.log(estado); // SC
+// 4.2
+
+function mostraInfo(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  return "".concat(nome, " tem ").concat(idade, " anos.");
+}
+
+mostraInfo({
+  nome: "Diego",
   idade: 23
-};
-
-var mostraIdade = function mostraIdade(usuario) {
-  return usuario.idade;
-};
-
-mostraIdade(usuario); // 3.3
-
-var nome = 'Diego';
-var idade = 23;
-
-var mostraUsuario = function mostraUsuario() {
-  var nome = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Diego';
-  var idade = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 18;
-  return {
-    nome: nome,
-    idade: idade
-  };
-};
-
-console.log(mostraUsuario(nome, usuario));
-console.log(mostraUsuario(nome)); // 3.4
-
-var promise = function promise() {
-  return new Promise(function (resolve, reject) {
-    return resolve();
-  });
-};
+});
