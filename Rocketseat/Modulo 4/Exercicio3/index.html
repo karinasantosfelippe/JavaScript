@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <input type="text" name="user" id="user" />
+    <button onclick="buscarPerfil()">Buscar</button>
+    <ul id="reposList"></ul>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        function buscarPerfil(){
+            var inputUser = document.querySelector('input#user').value
+            var listaRepos = document.querySelector('ul#reposList')
+            listaRepos.innerHTML = 'Carregando...'
+            axios.get(`https://api.github.com/users/${inputUser}/repos`)
+                .then(function(response){
+                    listaRepos.innerHTML = ''
+                    for(item of response.data){
+                        let repos = document.createElement('li')
+                        repos.appendChild(document.createTextNode(item.name))
+                        listaRepos.appendChild(repos)
+                    }
+                })
+                .catch(function(error){
+                    listaRepos.innerHTML = ''
+                    window.alert('[ERRO] Usuário não encontrado!')
+                })
+        }
+    </script>
+</body>
+</html>
