@@ -3,7 +3,6 @@ var minhaPromise = function (){
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'https://api.github.com/users/karinasantosfelippe');
         xhr.send(null)
-
         xhr.onreadystatechange = function(){
             if(xhr.readyState === 4){
                 if(xhr.status === 200){

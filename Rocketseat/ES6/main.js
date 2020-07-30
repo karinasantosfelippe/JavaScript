@@ -1,30 +1,11 @@
-// EXERCICIO 5
+// EXERCICIO 7
 
-// 5.1 PARTE 1
-const arr = [1, 2, 3, 4, 5, 6];
-const [x, ...y] = arr;
-console.log(x); // 1
-console.log(y); // [2, 3, 4, 5, 6]
+const nome = "Diego";
+const idade = 23;
 
-// 5.1 PARTE 2
-function soma(...nums) {
-  return nums.reduce((a, b) => a + b);
-}
-console.log(soma(1, 2, 3, 4, 5, 6)); // 21
-console.log(soma(1, 2)); // 3
-
-// 5.2
 const usuario = {
-  nome: "Diego",
-  idade: 23,
-  endereco: {
-    cidade: "Rio do Sul",
-    uf: "SC",
-    pais: "Brasil"
-  }
+  nome, // na sintaxe curta de objetos, não precisamos escrever [ nome: nome ]
+  idade,
+  cidade: "Rio do Sul"
 };
-const usuario2 = { ...usuario, nome: "Gabriel" };
-const usuario3 = {
-  ...usuario,
-  endereco: { ...usuario.endereco, cidade: "Lontras" }
-};
+
